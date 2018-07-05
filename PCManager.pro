@@ -7,16 +7,7 @@ TARGET = PCManager
 CONFIG(x64){
 TARGET = $$TARGET"64"
 }
-DEPENDPATH += .
-INCLUDEPATH += . \
-			   ../../utilities/include \
-			   ../../soui/include \
-			   ../../components \
-			   
-dir = ../..
-include($$dir/common.pri)
-
-QMAKE_LIBDIR += ../third-part/bass
+include($$(SOUIPATH)/demo_com.pri)
 
 CONFIG(debug,debug|release){
 	LIBS += utilitiesd.lib souid.lib
